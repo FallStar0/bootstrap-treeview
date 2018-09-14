@@ -17,6 +17,24 @@ Where provided these are the actual versions bootstrap-treeview has been tested 
 - [Bootstrap v3.3.4 (>= 3.0.0)](http://getbootstrap.com/)
 - [jQuery v2.1.3 (>= 1.9.0)](http://jquery.com/)
 
+## 2018.09.14 Add
+Add 2 options   
+//Node pre template ,call before the node init   
+nodePreTemplate: function(node, level){},
+//Node template call after node text appended   
+nodeTemplate: function(treeItem, node, level){},   
+
+Add 1 method
+```
+//get all nodes that match the function
+
+var nodes = tree.treeview('find', function (node) {
+if (node.value == null) {   
+                    return false;   
+                }
+                return true;
+            });
+```
 
 ## Getting Started
 
